@@ -1,0 +1,32 @@
+<!-- Forms
+      ================================================== -->
+<div class="bs-docs-section">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h1 id="forms">Editar Departamento</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="bs-component">
+                <form action="/dept/update/{{dept.id}}" method="post">
+                    <div class="form-group">
+                        <label class="col-form-label mt-2" for="name">Nome do Departamento</label>
+                        <input type="text" class="form-control" name="name" value="{{dept.name}}">
+                        <div class="invalid-feedback">{{showError errors 'name'}}</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label mt-2" for="inputSigla">Sigla</label>
+                        <input type="text" class="form-control" placeholder="Default input" id="sigla" value="{{dept.sigla}}" name="sigla">
+                    </div>
+                    <div class="form-group mt-2">
+                        <button class="btn btn-lg btn-primary" type="submit">Submeter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
